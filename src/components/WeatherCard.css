@@ -1,0 +1,136 @@
+.weather-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  border-radius: 28px;
+  padding: 32px;
+  margin-bottom: 20px;
+  animation: slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header row: city info + icon */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.city-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e0e7ff;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.country-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  background: rgba(99, 102, 241, 0.3);
+  border: 1px solid rgba(165, 180, 252, 0.3);
+  border-radius: 20px;
+  color: #a5b4fc;
+  letter-spacing: 1px;
+}
+
+.date-text {
+  font-size: 13px;
+  color: rgba(224, 231, 255, 0.45);
+}
+
+/* Icon from OpenWeatherMap CDN */
+.weather-icon-img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 4px 12px rgba(165, 180, 252, 0.3));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Big temp number */
+.temp-display {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.temp-number {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1;
+  color: #e0e7ff;
+  letter-spacing: -4px;
+}
+
+.temp-unit {
+  font-size: 28px;
+  color: #818cf8;
+  margin-top: 12px;
+  font-weight: 400;
+}
+
+.condition-text {
+  font-size: 16px;
+  color: rgba(224, 231, 255, 0.6);
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+/* 2x2 details grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(165, 180, 252, 0.1);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 0.2s;
+}
+
+.detail-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.detail-icon {
+  font-size: 18px;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: rgba(224, 231, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.detail-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c7d2fe;
+}

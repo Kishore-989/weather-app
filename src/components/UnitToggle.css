@@ -1,0 +1,31 @@
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.unit-btn {
+  padding: 7px 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(165, 180, 252, 0.25);
+  background: transparent;
+  color: rgba(224, 231, 255, 0.45);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.unit-btn:hover {
+  border-color: rgba(165, 180, 252, 0.5);
+  color: rgba(224, 231, 255, 0.8);
+}
+
+.unit-btn.active {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #818cf8;
+  color: #e0e7ff;
+}
